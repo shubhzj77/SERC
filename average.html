@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Javascript HTML Table - Average Value</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <table id="table" border="1">
+            <tr>
+                <th>Subject</th>
+
+                <th>Marks(50)</th>
+            </tr>
+            <tr>
+                <td>AC</td>
+                
+                <td>43</td>
+            </tr>
+            <tr>
+                <td>LIC</td>
+                
+                <td>41</td>
+            </tr>
+            <tr>
+                <td>CMOS</td>
+                
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>CVD</td>
+                
+                <td>42</td>
+            </tr>
+            <tr>
+                <td>MC</td>
+                
+                <td>48</td>
+            </tr>
+            <tr>
+                <td>S & S</td>
+            
+                <td>47</td>
+            </tr>
+            
+        </table>
+        
+        <span id="val"></span>
+        
+        <script>
+            
+            var table = document.getElementById("table"), avgVal, sumVal = 0, 
+                        rowCount = table.rows.length - 1;// minus the header
+            
+            for(var i = 1; i < table.rows.length; i++)
+            {
+                sumVal = sumVal + parseInt(table.rows[i].cells[1].innerHTML);
+            }
+            
+            document.getElementById("val").innerHTML = "Average Value = " + parseInt(sumVal / rowCount);
+            
+        </script>
+        
+        
+    </body>
+</html>
