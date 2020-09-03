@@ -1,0 +1,25 @@
+[16:02, 03/09/2020] Deb DSCE: <!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $.post("myfirstasp.asp",
+    {
+      name: "shubham",
+      city: "banglore"
+    },
+    function(data,status){
+      alert("Data: " + data + "\nStatus: " + status);
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<button>CLLICK HERE</button>
+
+</body>
+</html>
